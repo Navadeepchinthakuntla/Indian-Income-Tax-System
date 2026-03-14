@@ -2,14 +2,16 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Hello and welcome!");
+        TAXPAYER person =new TAXPAYER();
+        person.name="ajay";
+        person.age=22;
+        person.employmentType="private";
+        person.annualincome=600000;
+        System.out.println("Name : "+person.name);
+        System.out.println("Age : "+person.age);
+        System.out.println("Employment type : "+person.employmentType);
+        System.out.println("Annulincome : "+person.annualincome);
 
-
-         //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("INDIAN TAX SYSTEM");
 
     }
 }
