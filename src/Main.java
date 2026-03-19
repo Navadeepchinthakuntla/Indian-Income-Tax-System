@@ -13,7 +13,7 @@ public class Main {
         person.employmentType= sc.nextLine();
         System.out.print("Enter Annual Income : ");
         person.annualincome= sc.nextDouble();
-        double tax=TaxCalculator.CalculateTax(person.annualincome);
+        double tax=TaxCalculator.CalculateTax(person.annualincome,person.employmentType);
         TaxReport.printreport(person,tax);
 
 
