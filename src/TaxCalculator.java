@@ -1,10 +1,13 @@
 public class TaxCalculator {
-    public static double CalculateTax(double Income,String employmentType){
+    public static TaxDetails CalculateTax(double Income,String employmentType){
+        TaxDetails details=new TaxDetails();
         double TaxableIncome=Income;
         if(employmentType.equalsIgnoreCase("Government")||
                 employmentType.equalsIgnoreCase("Private")) {
             TaxableIncome = Income - 50000;
+
         }
+        details.TaxableIncome=TaxableIncome;
         double tax =0;
         if(TaxableIncome<=300000){
             tax=0;
@@ -35,8 +38,11 @@ public class TaxCalculator {
         if (TaxableIncome<700000){
             tax=0;
         }
-        tax=tax+tax*(0.04);
-        return tax;
+        details.BaseTax=tax;
+        double cess=tax*(0.04);
+        details.Cess=cess;
+        details.FinalTax=tax+cess;
+        return details;
 
     }
 }
